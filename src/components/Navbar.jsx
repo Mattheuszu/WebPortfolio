@@ -3,6 +3,7 @@ const links = [
     { href: '#skills', label: 'Kompetenser' },
     { href: '#projects', label: 'Projekt' },
     { href: '#contact', label: 'Kontakt' },
+    { href: '#plans', label: 'Planer' },
 ]
 
 function Navbar() {

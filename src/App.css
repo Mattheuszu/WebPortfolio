@@ -606,6 +606,50 @@ section {
   margin-top: -8px;
 }
 
+/* ===== Kommande ===== */
+.event + .event {
+  border-top: 1px dashed var(--border);
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.event-cron {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.event-name {
+  font-size: 18px;
+  margin: 4px 0;
+}
+
+.event-meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.event-countdown {
+  margin-bottom: 12px;
+}
+
+.ev-time {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 255, 156, 0.5);
+}
+
+.ev-live {
+  color: #ff5f56;
+  font-weight: 700;
+  animation: blink 1.5s infinite;
+}
+
+.ev-done {
+  color: var(--muted);
+}
+
 .level.basic              { color: var(--muted); }
 .level.intermediate       { color: #ffbd2e; }
 .level.upper-intermediate { color: #7ee787; }
