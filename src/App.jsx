@@ -6,6 +6,8 @@ import Projects from './components/Projects'
 import Contacts from './components/Contacts'
 import MatrixRain from './components/MatrixRain'
 import TypeWriter from "./components/TypeWriter.jsx";
+import Footer from "./components/Footer.jsx";
+import Navbar from ',/components/Navbar';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
             <Contacts />
             <MatrixRain />
             <TypeWriter />
+            <Footer />
+            <Navbar />
         </main>
     )
 }
