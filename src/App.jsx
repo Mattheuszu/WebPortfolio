@@ -7,7 +7,7 @@ import Contacts from './components/Contacts'
 import MatrixRain from './components/MatrixRain'
 import TypeWriter from "./components/TypeWriter.jsx";
 import Footer from "./components/Footer.jsx";
-import Navbar from ',/components/Navbar';
+import Navbar from './components/Navbar';
 
 
 function App() {
