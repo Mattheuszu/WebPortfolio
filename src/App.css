@@ -1,0 +1,325 @@
+:root {
+  --bg: #0d1117;
+  --card: rgba(22, 27, 34, 0.85);
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #00ff9c;
+  --border: #30363d;
+  --font: 'JetBrains Mono', Consolas, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+}
+
+/* ===== Контейнер: центрирует контент ===== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Шапка ===== */
+header {
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 56px;
+  color: var(--accent);
+}
+
+header p {
+  font-size: 20px;
+  color: var(--muted);
+}
+
+/* ===== Разделы ===== */
+section {
+  padding: 40px 0;
+  border-top: 1px solid var(--border);
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+h2::before {
+  content: '> ';
+  color: var(--accent);
+}
+
+/* ===== Навыки: «бейджики» ===== */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-list li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* ===== Проекты: сетка карточек ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* ===== Ссылки ===== */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Контакты ===== */
+.contact-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+/* ===== Телефоны ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 40px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+}
+
+/* ===== Фон «Матрица» ===== */
+.matrix {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* ===== Свечение имени ===== */
+header h1 {
+  text-shadow: 0 0 10px var(--accent), 0 0 30px rgba(0, 255, 156, 0.4);
+}
+
+.prompt {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ===== Мигающий курсор ===== */
+.cursor {
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ===== Карточки как окна терминала ===== */
+.project-card {
+  backdrop-filter: blur(4px);
+}
+
+.project-card::before {
+  content: '● ● ●';
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.project-card h3::before {
+  content: './';
+  color: var(--accent);
+}
+
+.project-card:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 156, 0.2);
+}
+
+/* ===== Навыки подсвечиваются при наведении ===== */
+.skills-list li {
+  transition: all 0.2s;
+}
+
+.skills-list li:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 255, 156, 0.3);
+}
+
+/* ===== Эффект старого монитора (полосы) ===== */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.15) 0px,
+          rgba(0, 0, 0, 0.15) 1px,
+          transparent 1px,
+          transparent 3px
+  );
+  z-index: 10;
+}
+
+/* ===== Окно терминала ===== */
+.terminal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 255, 156, 0.08);
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--border);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  margin-right: 52px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.cmd {
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.prompt-sign {
+  color: var(--accent);
+}
+
+.bio {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ===== neofetch-таблица ===== */
+.info-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.info-list li {
+  display: flex;
+  gap: 12px;
+  padding: 2px 0;
+}
+
+.info-key {
+  color: var(--accent);
+  min-width: 110px;
+}
+
+.info-key::after {
+  content: ':';
+}
+
+@media (max-width: 600px) {
+  .info-list li {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* ===== tree ===== */
+.tree {
+  overflow-x: auto;
+}
+
+.tree p {
+  white-space: pre;
+  line-height: 1.7;
+}
+
+.tree-root {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.tree-folder {
+  color: #58a6ff;
+  font-weight: 700;
+}
+
+.tree-line {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.level {
+  margin-left: 10px;
+  font-size: 11px;
+}
+
+.level.basic    { color: var(--muted); }
+.level.upper-intermediate      { color: #ff5f56; }
+.level.intermediate { color: #ffbd2e; }
+.level.advanced { color: var(--accent); }
