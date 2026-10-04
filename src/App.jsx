@@ -17,11 +17,11 @@ function App() {
             <Navbar />
             <Header />
             <About />
+            <Upcoming />
             <Skills />
             <Projects />
             <Contacts />
             <Footer />
-            <Upcoming />
         </main>
     )
 }
