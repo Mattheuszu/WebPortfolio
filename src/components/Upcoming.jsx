@@ -17,6 +17,18 @@ const events = [
         ],
         link: 'https://liu.se/en/event/eudis-defence-hackathon-2026-sweden',
     },
+
+    {
+        name: 'Bünsow Challenge',
+        city: 'Sundsvall',
+        dates: '7 oktober 2026, kl. 15–20',
+        start: '2026-10-07T15:00',
+        end: '2026-10-07T20:00',
+        host: 'Bünsow',
+        theme: 'Lösa verkliga företagsutmaningar med AI på 5 timmar',
+        tracks: ['AI', '5 timmar', '30 000 kr i vinstpott'],
+        link: 'https://bunsow.se/bunsow-challenge',
+    },
 ]
 
 function Countdown({ start, end }) {
@@ -27,8 +39,8 @@ function Countdown({ start, end }) {
         return () => clearInterval(timer)
     }, [])
 
-    const startTime = new Date(start + 'T09:00:00').getTime()
-    const endTime = new Date(end + 'T23:59:59').getTime()
+    const startTime = new Date(start).getTime()
+    const endTime = new Date(end).getTime()
 
     if (now > endTime) {
         return <span className="ev-done">✓ Genomfört</span>
@@ -55,6 +67,10 @@ function Countdown({ start, end }) {
 }
 
 function Upcoming() {
+    const sortedEvents = [...events].sort(
+        (a, b) => new Date(a.start) - new Date(b.start)
+    )
+
     return (
         <section id="plans">
             <h2>Mina resor</h2>
@@ -64,7 +80,7 @@ function Upcoming() {
                     <span className="prompt-sign">$</span> crontab -l
                 </p>
 
-                {events.map((event) => (
+                {sortedEvents.map((event) => (
                     <div key={event.name} className="event">
                         <p className="event-cron">
                             # {event.dates} · {event.city}
