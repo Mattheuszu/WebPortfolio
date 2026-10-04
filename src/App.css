@@ -482,6 +482,74 @@ section {
   }
 }
 
+/* ===== Аватар ===== */
+.avatar {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 28px;
+}
+
+/* вращающееся светящееся кольцо */
+.avatar::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: conic-gradient(
+          var(--accent),
+          transparent 30%,
+          var(--accent) 60%,
+          transparent 80%
+  );
+  animation: spin 4s linear infinite;
+}
+
+/* мягкое свечение вокруг */
+.avatar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(0, 255, 156, 0.35);
+  pointer-events: none;
+}
+
+.avatar-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg);
+  transition: opacity 0.4s;
+}
+
+/* настоящее фото скрыто, появляется при наведении */
+.avatar-img.real {
+  opacity: 0;
+}
+
+.avatar:hover .avatar-img.real {
+  opacity: 1;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar::before { animation: none; }
+}
+
+@media (max-width: 600px) {
+  .avatar {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 .level.basic              { color: var(--muted); }
 .level.intermediate       { color: #ffbd2e; }
 .level.upper-intermediate { color: #7ee787; }
