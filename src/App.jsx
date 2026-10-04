@@ -1,27 +1,25 @@
 import './App.css'
+import MatrixRain from './components/MatrixRain'
+import Navbar from './components/Navbar'
 import Header from './components/Header'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contacts from './components/Contacts'
-import MatrixRain from './components/MatrixRain'
-import TypeWriter from "./components/TypeWriter.jsx";
-import Footer from "./components/Footer.jsx";
-import Navbar from './components/Navbar';
+import Footer from './components/Footer'
 
 
 function App() {
-    return  (
+    return (
         <main className="container">
+            <MatrixRain />
+            <Navbar />
             <Header />
             <About />
             <Skills />
             <Projects />
             <Contacts />
-            <MatrixRain />
-            <TypeWriter />
             <Footer />
-            <Navbar />
         </main>
     )
 }

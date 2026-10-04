@@ -5,7 +5,7 @@ const projects = [
     {
         title: 'AI Email Phishing Analyzer',
         description:
-            'Upptäcker phishing-mejl genom att kombinera regelbaserade säkerhetsheuristiker med semantisk AI-analys. Analyserar .eml-filer eller skannar en Gmail-inkorg via OAuth2.\n',
+            'Upptäcker phishing-mejl genom att kombinera regelbaserade säkerhetsheuristiker med semantisk AI-analys. Analyserar .eml-filer eller skannar en Gmail-inkorg via OAuth2.',
         tech: ['Python', 'Claude API', 'OAuth2', 'Gmail API'],
         category: 'Security',
         link: 'https://github.com/Mattheuszu/AI-Email-Phishing-Analyzer',
@@ -49,7 +49,7 @@ const projects = [
             'Denna portföljwebbplats – byggd med React och Vite',
         tech: ['React', 'Vite', 'CSS'],
         category: 'Web',
-        link: 'https://github.com/Mattheuszu',
+        link: 'https://github.com/Mattheuszu/WebPortfolio',
     },
 ]
 

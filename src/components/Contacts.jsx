@@ -7,6 +7,7 @@ const contacts = [
 function Contacts() {
     return (
         <section>
+            id="contact"
             <h2>Contacts</h2>
             <p>Vill du höra av dig? Skicka gärna ett meddelande till mig!</p>
             <div className="contact-links">
