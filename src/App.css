@@ -598,6 +598,14 @@ section {
   }
 }
 
+.hl {
+  color: var(--accent);
+}
+
+.bio + .bio {
+  margin-top: -8px;
+}
+
 .level.basic              { color: var(--muted); }
 .level.intermediate       { color: #ffbd2e; }
 .level.upper-intermediate { color: #7ee787; }

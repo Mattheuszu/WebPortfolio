@@ -25,11 +25,28 @@ function About() {
                         <span className="prompt-sign">$</span> cat about.txt
                     </p>
                     <p className="bio">
-                        👋 Hej! Jag är en självlärd utvecklare och blivande cybersäkerhetsanalytiker.
-                        Jag började inte med teknik för att någon sa åt mig att göra det – jag
-                        började för att jag inte kunde sluta.
-                        Just nu läser jag en utbildning i cybersäkerhet, har en examen i datavetenskap och
-                        brinner för programmering.
+                        👋 Hej! Jag heter Denys, är 20 år och kommer från Kharkiv i Ukraina.
+                        Jag har bott i Sverige i tre år och bor i dag i Sundsvall, där jag
+                        kombinerar studier med jobb på Permobil. Mitt mål är att arbeta som{' '}
+                        <span className="hl">SOC-analytiker inom Blue Team</span> — att upptäcka,
+                        analysera och stoppa attacker innan de hinner göra skada.
+                    </p>
+
+                    <p className="bio">
+                        Jag började inte med teknik för att någon sa åt mig — jag började för att
+                        jag inte kunde sluta. Det som startade med C++ på college i Kharkiv har
+                        vuxit till en bred grund i Python, C#, SQL och webbutveckling. I dag
+                        studerar jag <span className="hl">cybersäkerhet och informationsskydd</span>{' '}
+                        vid Kharkiv Polytechnic Institute, med ett år kvar till examen. Mina
+                        tidigare studier i datavetenskap är validerade i Sverige.
+                    </p>
+
+                    <p className="bio">
+                        Jag lär mig bäst genom att bygga. Jag har tagit{' '}
+                        <span className="hl">3:e plats på ett AI-hackathon i Sundsvall</span>,
+                        byggt en phishing-analysator med Gmail API och Claude, och tränar på
+                        Hack The Box och TryHackMe (SOC Level 1) på fritiden. Det jag lär mig
+                        delar jag öppet på GitHub och LinkedIn.
                     </p>
 
                     <p className="cmd">
