@@ -5,7 +5,7 @@ const events = [
     {
         name: 'EUDIS Defence Hackathon 2026',
         city: 'Linköping',
-        date: '15–17 oktober 2026',
+        dates: '15–17 oktober 2026',
         start: '2026-10-15',
         end:  '2026-10-17',
         host:  'Linköpings universitet',
