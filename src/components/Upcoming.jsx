@@ -57,7 +57,7 @@ function Countdown({ start, end }) {
 function Upcoming() {
     return (
         <section id="plans">
-            <h2>Kommande</h2>
+            <h2>Mina resor</h2>
 
             <Terminal title="denys@portfolio: ~/plans">
                 <p className="cmd">
