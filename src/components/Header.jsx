@@ -1,4 +1,4 @@
-import Typewriter from './Typewriter'
+import Typewriter from './TypeWriter'
 
 function Header() {
     return (

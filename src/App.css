@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --bg: #0d1117;
   --card: rgba(22, 27, 34, 0.85);
@@ -319,7 +325,90 @@ body::after {
   font-size: 11px;
 }
 
-.level.basic    { color: var(--muted); }
-.level.upper-intermediate      { color: #ff5f56; }
-.level.intermediate { color: #ffbd2e; }
-.level.advanced { color: var(--accent); }
+/* ===== Фильтры ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter {
+  font-family: var(--font);
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.filter.active {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+/* ===== Карточка проекта ===== */
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card p {
+  flex: 1;
+}
+
+.project-card.featured {
+  grid-column: span 2;
+  border-color: rgba(0, 255, 156, 0.4);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.card-category { color: var(--muted); }
+.card-featured { color: var(--accent); }
+
+.tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.tech-list li {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--accent);
+  background: rgba(0, 255, 156, 0.08);
+  border: 1px solid rgba(0, 255, 156, 0.25);
+}
+
+.card-link {
+  font-size: 13px;
+  align-self: flex-start;
+}
+
+@media (max-width: 600px) {
+  .project-card.featured {
+    grid-column: auto;
+  }
+}
+
+.level.basic              { color: var(--muted); }
+.level.intermediate       { color: #ffbd2e; }
+.level.upper-intermediate { color: #7ee787; }
+.level.advanced           { color: var(--accent); }
