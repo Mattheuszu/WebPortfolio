@@ -27,8 +27,8 @@ function About() {
                     <p className="bio">
                         👋 Hej! Jag heter Denys, är 20 år och kommer från Kharkiv i Ukraina.
                         Jag har bott i Sverige i tre år och bor i dag i Sundsvall, där jag
-                        kombinerar studier med jobb på Permobil. Mitt mål är att arbeta som{' '}
-                        <span className="hl">SOC-analytiker inom Blue Team</span> — att upptäcka,
+                        kombinerar studier med jobb på Permobil. Mitt mål är att arbeta inom{' '}
+                        <span className="hl">Cybersäkerhet/Programutvecklare/Programvaruutveckling</span> — att upptäcka,
                         analysera och stoppa attacker innan de hinner göra skada.
                     </p>
 
