@@ -6,8 +6,8 @@ const contacts = [
 
 function Contacts() {
     return (
-        <section>
-            <h2>Contacts</h2>
+        <section id="contact">
+            <h2>Kontakt</h2>
             <p>Vill du höra av dig? Skicka gärna ett meddelande till mig!</p>
             <div className="contact-links">
                 {contacts.map((contact) => (
